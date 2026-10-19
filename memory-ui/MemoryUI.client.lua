@@ -17,8 +17,8 @@ gui.ResetOnSpawn = false
 gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 gui.Parent = player:WaitForChild("PlayerGui")
 
--- Upload the supplied PNGs to Roblox, then put their asset IDs here. Empty IDs use
--- the programmatic fallbacks below. Roblox does not load local PNG paths in ImageLabel.
+-- Upload the supplied PNGs to Roblox, then put their asset IDs here. Empty IDs
+-- use the guarded GitHub adapter when its image APIs exist, or stay hidden.
 local ASSET_IDS = {
     background = "", sidebarCrown = "", loginBackground = "", loginCrown = "",
     sliderFill = "",
