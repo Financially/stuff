@@ -493,6 +493,9 @@ local loginButton = R.Rect(login,26,234,396,32,C.card2,9,Color3.fromRGB(21,21,23
 R.Icon(loginButton,"login_solid",165,7,24,18,22)
 R.Text(loginButton,"Login",192,0,85,32,11,Color3.fromRGB(140,140,149),false,nil,22)
 local status = R.Text(login,"",26,287,396,20,11,Color3.fromRGB(236,88,92),false,Enum.TextXAlignment.Center,22)
+local postLoginStatus=R.Text(root,"",1059,325,160,20,11,Color3.fromRGB(141,209,130),false,Enum.TextXAlignment.Center,19)
+postLoginStatus.Visible=false
+local postLoginUntil=0
 local authenticated=false
 local function tryLogin()
     if username.Text=="" then status.Text="Enter a username"; return end
@@ -502,6 +505,10 @@ local function tryLogin()
     end
     status.Text="Welcome, Glitch"
     status.TextColor3=Color3.fromRGB(141,209,130)
+    postLoginStatus.Text="Welcome, Glitch"
+    postLoginStatus.TextTransparency=0
+    postLoginStatus.Visible=true
+    postLoginUntil=os.clock()+3.5
     authenticated=true
     selectedTab=4 -- Original try_login() selects Triggerbot (index 3).
 end
@@ -558,6 +565,10 @@ connect(RunService.RenderStepped,function(dt)
     backdrop.BackgroundTransparency=fade
     backdrop.Visible=fade<0.999
     login.Visible=not authenticated
+    if postLoginStatus.Visible and os.clock()>postLoginUntil then
+        postLoginStatus.TextTransparency=math.clamp((os.clock()-postLoginUntil)*1.5,0,1)
+        if postLoginStatus.TextTransparency>=1 then postLoginStatus.Visible=false end
+    end
 end)
 
 local api={Gui=gui,Controls=switches,Slider=slider,Combos=combos,Breadcrumb=breadcrumb,Renderer=R,Assets=AssetManager}
