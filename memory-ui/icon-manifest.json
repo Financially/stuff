@@ -1,7 +1,7 @@
 {
   "repository": "Financially/stuff",
   "directory": "memory-ui/assets/icons",
-  "notes": "PNG files are white alpha masks rasterized from the supplied SVGs. The Luau script applies source colors with ImageColor3. Fill robloxAssetId after uploading each image to Roblox. ImageLabel cannot use raw GitHub URLs.",
+  "notes": "PNG files are white alpha masks rasterized from the supplied SVGs. The Luau script applies source colors with ImageColor3. Fill robloxAssetId after uploading each active image to Roblox. ImageLabel cannot use raw GitHub URLs. Login icons are source-only and unused after loader removal.",
   "icons": [
     {"name":"target_fill","file":"target_fill.png","uses":["Aimbot sidebar"],"robloxAssetId":""},
     {"name":"sharp_edit","file":"sharp_edit.png","uses":["Manipulation sidebar"],"robloxAssetId":""},
@@ -23,10 +23,9 @@
     {"name":"chevron_down","file":"chevron_down.png","uses":["dropdown arrows"],"robloxAssetId":""},
     {"name":"view_filled_3","file":"view_filled_3.png","uses":["Visuals section header"],"robloxAssetId":""},
     {"name":"pencil","file":"pencil.png","uses":["Effects header"],"robloxAssetId":""},
-    {"name":"user_filled","file":"user_filled.png","uses":["login username"],"robloxAssetId":""},
-    {"name":"lock_filled","file":"lock_filled.png","uses":["login password"],"robloxAssetId":""},
-    {"name":"eye","file":"eye.png","uses":["login password visibility"],"robloxAssetId":""},
-    {"name":"login_solid","file":"login_solid.png","uses":["login button"],"robloxAssetId":""}
+    {"name":"user_filled","file":"user_filled.png","uses":[],"active":false,"robloxAssetId":""},
+    {"name":"lock_filled","file":"lock_filled.png","uses":[],"active":false,"robloxAssetId":""},
+    {"name":"eye","file":"eye.png","uses":[],"active":false,"robloxAssetId":""},
+    {"name":"login_solid","file":"login_solid.png","uses":[],"active":false,"robloxAssetId":""}
   ]
 }
-
