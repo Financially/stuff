@@ -1,0 +1,53 @@
+
+local Config = {
+    Enabled = true,
+    Message = "imgay",
+    Cooldown = 1,
+}
+
+local UIS = game:GetService("UserInputService")
+local TextChatService = game:GetService("TextChatService")
+
+local env = getgenv()
+
+-- Stop previous instance
+if env.StopClickChat then
+    env.StopClickChat()
+end
+
+env.ClickChatConfig = Config
+
+local lastMessage = 0
+local connection
+
+connection = UIS.InputBegan:Connect(function(input, gameProcessed)
+    if not Config.Enabled then return end
+    if gameProcessed then return end
+
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        local now = os.clock()
+
+        if now - lastMessage < Config.Cooldown then
+            return
+        end
+
+        lastMessage = now
+
+        local channel = TextChatService.TextChannels:FindFirstChild("RBXGeneral")
+
+        if channel then
+            pcall(function()
+                channel:SendAsync(Config.Message)
+            end)
+        end
+    end
+end)
+
+env.StopClickChat = function()
+    Config.Enabled = false
+
+    if connection then
+        connection:Disconnect()
+        connection = nil
+    end
+end
