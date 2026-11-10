@@ -1,0 +1,11 @@
+{
+  "source": "Memory/Menu/generated/generated_fonts.cpp",
+  "notes": "Source slot pixel sizes are internal ImGui font sizes; the Luau text labels use the visible design-space sizes. Upload fonts as Roblox FontFamily assets and enter their IDs in FONT_IDS. Gotham is the fallback.",
+  "families": [
+    {"name":"Inter","fileFaces":["inter-500-normal.ttf","inter-600-normal.ttf","inter-700-normal.ttf"],"luaKey":"inter","sourceSlots":["700_12_5","700_15","700_19","600_10","600_12_5","500_10","500_11","500_11_5","500_12"],"robloxFontFamilyId":""},
+    {"name":"Roboto","fileFaces":["roboto-500-normal.ttf"],"luaKey":"roboto","sourceSlots":["500_9_5","500_10","500_11_5","500_12"],"robloxFontFamilyId":""},
+    {"name":"Geist","fileFaces":["Geist-Medium.ttf","Geist-SemiBold.ttf"],"luaKey":"geist","sourceSlots":["500_11_5","500_12","600_12_5","600_13"],"robloxFontFamilyId":""}
+  ],
+  "iconFont": "lazyui-generated-icons.ttf",
+  "iconRendering": "24 SVG source icons were rasterized as white-alpha PNG masks; 20 remain active in the dashboard."
+}

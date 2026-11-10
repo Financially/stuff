@@ -1,0 +1,31 @@
+{
+  "repository": "Financially/stuff",
+  "directory": "memory-ui/assets/icons",
+  "notes": "PNG files are white alpha masks rasterized from the supplied SVGs. The Luau script applies source colors with ImageColor3. Fill robloxAssetId after uploading each active image to Roblox. ImageLabel cannot use raw GitHub URLs. Login icons are source-only and unused after loader removal.",
+  "icons": [
+    {"name":"target_fill","file":"target_fill.png","uses":["Aimbot sidebar"],"robloxAssetId":""},
+    {"name":"sharp_edit","file":"sharp_edit.png","uses":["Manipulation sidebar"],"robloxAssetId":""},
+    {"name":"baseline_mouse","file":"baseline_mouse.png","uses":["Triggerbot sidebar"],"robloxAssetId":""},
+    {"name":"view_filled","file":"view_filled.png","uses":["Visuals sidebar","Visuals breadcrumb"],"robloxAssetId":""},
+    {"name":"baseline_discord","file":"baseline_discord.png","uses":["profile badge"],"robloxAssetId":""},
+    {"name":"gear","file":"gear.png","uses":["profile settings"],"robloxAssetId":""},
+    {"name":"chevron_right","file":"chevron_right.png","uses":["breadcrumb"],"robloxAssetId":""},
+    {"name":"users","file":"users.png","uses":["Players breadcrumb"],"robloxAssetId":""},
+    {"name":"world_2_fill","file":"world_2_fill.png","uses":["World breadcrumb"],"robloxAssetId":""},
+    {"name":"search","file":"search.png","uses":["header search"],"robloxAssetId":""},
+    {"name":"sliders","file":"sliders.png","uses":["Main header"],"robloxAssetId":""},
+    {"name":"dots","file":"dots.png","uses":["Enable decoration"],"robloxAssetId":""},
+    {"name":"right_fill","file":"right_fill.png","uses":["Boxes decoration"],"robloxAssetId":""},
+    {"name":"users_2","file":"users_2.png","uses":["Player header"],"robloxAssetId":""},
+    {"name":"gamepad_bold","file":"gamepad_bold.png","uses":["Info header"],"robloxAssetId":""},
+    {"name":"settings_bold","file":"settings_bold.png","uses":["Extras header"],"robloxAssetId":""},
+    {"name":"dots_2","file":"dots_2.png","uses":["Other header"],"robloxAssetId":""},
+    {"name":"chevron_down","file":"chevron_down.png","uses":["dropdown arrows"],"robloxAssetId":""},
+    {"name":"view_filled_3","file":"view_filled_3.png","uses":["Visuals section header"],"robloxAssetId":""},
+    {"name":"pencil","file":"pencil.png","uses":["Effects header"],"robloxAssetId":""},
+    {"name":"user_filled","file":"user_filled.png","uses":[],"active":false,"robloxAssetId":""},
+    {"name":"lock_filled","file":"lock_filled.png","uses":[],"active":false,"robloxAssetId":""},
+    {"name":"eye","file":"eye.png","uses":[],"active":false,"robloxAssetId":""},
+    {"name":"login_solid","file":"login_solid.png","uses":[],"active":false,"robloxAssetId":""}
+  ]
+}
